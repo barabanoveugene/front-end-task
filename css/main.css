@@ -1,0 +1,36 @@
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.wrap {
+    text-align: center;
+}
+.letter {
+    padding: 5px;
+    width: 100px;
+    background: rgb(238, 223, 11);
+    border-radius: 5px;
+    font-size: 36px;
+    cursor: pointer;
+    text-align: center;
+}
+.letter:hover {
+    background:cornsilk;
+    color:grey;
+    border: 2px solid transparent;
+}
+ol {
+    display: none;
+    padding: 0;
+    list-style-type: none;
+}
+li {
+    color: grey;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.errorText {
+    color: red;
+}
