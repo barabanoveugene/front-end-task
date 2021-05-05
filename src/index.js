@@ -3,9 +3,11 @@ import css from '../css/main.css'
 
 const someLetters = []
 const users = JSON.parse(data)
-const letter = document.getElementsByClassName('letter')
-const wrap = document.getElementsByClassName('wrap')
+const letters = document.getElementsByClassName('letter')
+const wraps = document.getElementsByClassName('wrap')
 const errorText = 'Name not found'
+
+
 
 const generationLetters = (func) => {
     if (someLetters.length === 5) return someLetters;
@@ -33,11 +35,12 @@ const showText = (value, text, className = null) => {
 
 generationLetters(generationNumbers)
 
-Array.from(wrap).forEach((item, index) => {
+Array.from(wraps).forEach((item, index) => {
     item.appendChild(document.createElement('ol')).id = someLetters[index]
 })
 
-Array.from(letter).forEach((item, index) => {
+
+Array.from(letters).forEach((item, index) => {
     item.value = someLetters[index]
     item.onclick = function (event) {
         const user = users.filter((item) => item.name.indexOf(event.target.value) === 0)
